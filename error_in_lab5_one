@@ -1,0 +1,32 @@
+//error in first_lab5
+
+class Parent {
+
+    private int a = 10;
+
+    public int getVar() {
+        return a;
+    }
+}
+
+class Child extends Parent {
+
+    public void display() {
+        System.out.println("value if a = " + getVar());
+    }
+}
+
+public class LAB5_first {
+
+    public static void main(String[] args) {
+        Child object = new Parent();
+        object.display();
+    }
+}
+//output
+PS D:\java\OOPS_JAVA> cd "d:\java\OOPS_JAVA"
+PS D:\java\OOPS_JAVA> cd "d:\java\OOPS_JAVA\" ; if ($?) { javac LAB5_first.java } ; if ($?) { java LAB5_first }
+LAB5_first.java:21: error: incompatible types: Parent cannot be converted to Child
+        Child object = new Parent();
+                       ^
+1 error
